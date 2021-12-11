@@ -6,7 +6,7 @@ int binarySearch(int arr[],int n,int key){
   int start=0; //delcareing start
   int end = n-1; //delcareing end of array
   
-   int mid=(start+end)/2; //finding mid of the array
+   int mid= start+(end - start)/2; //finding mid of the array.(start+end)/2 not using to avoid intger addition out of INT_MAX
   
   while (start <= end) //loop chalega jab tak start chota h ya baraber h end se 
   {
@@ -23,7 +23,7 @@ int binarySearch(int arr[],int n,int key){
     }
 
     //new mid upadate hoga
-  mid = (start+end)/2;   
+   mid= start+(end - start)/2; // (start+end)/2 not using to aoid over intger addition
   }
   return -1;
 
